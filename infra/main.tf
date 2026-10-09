@@ -23,8 +23,6 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   sku_name   = "B_Standard_B1ms"
   version    = "8.0.21"
 
-  zone                   = "3"
-
   storage {
     size_gb = 20
   }
@@ -42,7 +40,7 @@ resource "azurerm_mysql_flexible_server_firewall_rule" "allow_azure_services" {
   name                = "AllowAzureServices"
   resource_group_name = azurerm_resource_group.rg.name
   server_name         = azurerm_mysql_flexible_server.mysql.name
- 
+
   start_ip_address    = "0.0.0.0"
   end_ip_address      = "0.0.0.0"
 }
