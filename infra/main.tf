@@ -5,7 +5,7 @@ resource "random_string" "suffix" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
+  name     = "rg-queimadas-dbx-milena"
   location = var.location
 }
 
