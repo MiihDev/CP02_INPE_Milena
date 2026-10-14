@@ -1,7 +1,7 @@
 variable "resource_group_name" {
   type        = string
   description = "Nome do Resource Group"
-  default     = "rg-queimadas-dbx-milena"
+  default     = "rg-queimadas-dbx-milenateste"
 }
 
 variable "location" {
